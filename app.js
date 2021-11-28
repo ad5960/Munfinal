@@ -5,6 +5,7 @@
 document.getElementById("contactForm").addEventListener("submit", submitForm);
 
 function submitForm(e) {
+  
   e.preventDefault();
   let maxSize = 10*1024*1024;
 if(fileList[0].size<=maxSize){
@@ -26,6 +27,7 @@ if(fileList[0].size<=maxSize){
       })
       .then(() => {
         console.log("Document successfully written!");
+        alert("Submission Successful")
   
           //TODO do something with fileList.
           // Get a reference to the storage service, which is used to create references in your storage bucket
@@ -42,9 +44,11 @@ if(fileList[0].size<=maxSize){
           // 'file' comes from the Blob or File API
           childRef.put(fileList[0]).then((snapshot) => {
             console.log("Uploaded a blob or file!");
+            
           });
-        
+          
       })
+      
       .catch((error) => {
         console.error("Error writing document: ", error);
       });
@@ -53,7 +57,6 @@ else{
     alert('File too big')
 }
 }
-
 function getInputVal(id) {
   return document.getElementById(id).value;
 }
