@@ -27,7 +27,8 @@ if(fileList[0].size<=maxSize){
       })
       .then(() => {
         console.log("Document successfully written!");
-        alert("Submission Successful")
+        alert("Submission Successful");
+        
   
           //TODO do something with fileList.
           // Get a reference to the storage service, which is used to create references in your storage bucket
@@ -44,7 +45,7 @@ if(fileList[0].size<=maxSize){
           // 'file' comes from the Blob or File API
           childRef.put(fileList[0]).then((snapshot) => {
             console.log("Uploaded a blob or file!");
-            
+            window.location = '/';
           });
           
       })
@@ -60,5 +61,3 @@ else{
 function getInputVal(id) {
   return document.getElementById(id).value;
 }
-
-
