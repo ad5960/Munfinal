@@ -259,16 +259,17 @@ background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Ch
 background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 color: white;
 border-top-right-radius: 10px;
-padding-bottom: 10px;
+padding-bottom: 34px;
 }
 
 .kodak{
     background: #334d50;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #cbcaa5, #334d50);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #cbcaa5, #334d50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-padding-bottom: 28px;
+padding-bottom: 54px;
 color: white;
 border-top-left-radius: 10px;
+
 }
 
 .words{
@@ -311,7 +312,7 @@ background: linear-gradient(to right, #A8CABA, #5D4157); /* W3C, IE 10+/ Edge, F
 @media only screen and (max-width: 1201px) {
 
     .guttenberg{
-        padding-bottom: 10px;
+        padding-bottom: 34px;
     }
     .words{
         padding-top: 65px;
@@ -332,7 +333,7 @@ background: linear-gradient(to right, #A8CABA, #5D4157); /* W3C, IE 10+/ Edge, F
 background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    padding: 10px 60px;
+    padding: 10px 50px;
     border: none;
     border-radius: 4px;
     margin-top: 2rem;
@@ -361,7 +362,7 @@ background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, F
   @media only screen and (max-width: 992px) {
 
     .main_btn{
-        margin-left: 30%;
+        margin-left: 23%;
     }
 
 
