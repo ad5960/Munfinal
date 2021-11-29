@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="form-styles.css" />
+    <link rel="icon" href="images/favicon.jpeg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Submission</div>
+      <div class="content">
+        <form id="contactForm" action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input
+                id="fullname"
+                type="text"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input
+                id="number"
+                type="tel"
+                maxlength="10"
+                minlength="10"
+                placeholder="Enter your number"
+                required
+              />
+            </div>
+            <div class="input-box" required>
+              <label for="myfile">Select a file:</label>
+              <input type="file" id="myfile" name="myfile" accept=".pdf, .doc, .docx" />
+            </div>
+            <div class="input-box">
+              <label for="events">Choose an event:</label>
+  
+              <select name="events" id="events">
+                <option value="Gutenberg (Op-Ed)">Gutenberg (Op-Ed)</option>
+                <option value="Kodak (Photography)">Kodak (Photography)</option>
+                <option value="Words’ Worth (Poetry)">Words’ Worth (Poetry)</option>
+                <option value="Etch-A-Sketch (Digital Art)">Etch-A-Sketch (Digital Art)</option>
+                <option value="Art Attack (Fine Art)">Art Attack (Fine Art)</option>
+              </select>
+            </div>
+            
+          </div>
+          <div class="button">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script> 
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script> -->
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyA6iwkEoLp1K8h-FCT9gqc_3T3bKZXAy4E",
+        authDomain: "contactform-f9b76.firebaseapp.com",
+        projectId: "contactform-f9b76",
+        storageBucket: "contactform-f9b76.appspot.com",
+        messagingSenderId: "24361205056",
+        appId: "1:24361205056:web:ba7c6534d9cd7a63734ea5",
+      };
+
+      // Initialize Firebase
+      // const app = initializeApp(firebaseConfig);
+
+      // Initialize Cloud Firestore through Firebase
+      firebase.initializeApp(firebaseConfig);
+
+
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
