@@ -1,10 +1,21 @@
+:root{
+    --clr-neutral-900: hsl(207,19%, 9%);
+    --clr-neutral-100: hsl(0,0%, 100%);
+    --clr-accent-400: hsl(142, 90%, 61%)
+
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.event-body{
+body{
+    overflow-x: hidden;
     background-color: #000;
+}
+.event-body{
+    background: hsl(207,19%, 9%);
 }
 .fa {
     padding: 20px;
@@ -214,7 +225,7 @@
 .event-h1{
     color: #EEEEEE;
     text-align: center;
-    padding-top: 101px;
+    padding-bottom: 50px;
 }
 .event-h4{
     margin-bottom: 30px;
@@ -256,6 +267,9 @@
     padding-bottom: 20px;
     padding-top: 20px;
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.smalltext{
+    font-size: 1.05rem;
 }
 .guttenberg{
     background: #0F2027;  /* fallback for old browsers */
@@ -342,6 +356,9 @@ background: linear-gradient(to right, #A8CABA, #5D4157); /* W3C, IE 10+/ Edge, F
     box-shadow:0px -1px white;
 }
 
+.link-back{
+    background-color: #181818;
+}
 .sub_btn{
     font-size: 1.2rem;
     background: #ff00cc;  /* fallback for old browsers */
@@ -400,5 +417,208 @@ background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, F
 .foot-class{
     background-color: black;
     color: #a5821a;
-    height: 100%;
+    /* height: 100%; */
+}
+
+.kodak-body{
+    background-color: black;
+    padding-bottom: 40px;
+}
+
+
+
+.hurhur{
+    background-color: black;
+}
+.jum{
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 100px;
+    font-family: 'Raleway', sans-serif;
+   
+}
+.jumbotron{
+    margin-bottom: 0;
+}
+
+
+.f-card{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-btn{
+
+    text-align: center;
+}
+
+.card-column{
+    padding-right: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+
+    .card{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        
+    }
+    .card-lower-row{
+        margin-top: 0;
+    }
+}
+
+.card-img-top{
+    object-fit: cover;
+}
+
+.event-row{
+    margin-top: 15%;
+}
+.event-card-lrow{
+    margin-bottom: 5%;
+}
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:hsl(207,19%, 9%) ;
+    color: white;
+}
+
+.cardbody{
+
+    display: grid;
+    place-items: center;
+    line-height: 1.6;
+    background: var(--clr-neutral-900);
+    font-family: sans-serif;
+    
+}
+
+.event-card-row{
+    justify-content: space-evenly;
+}
+.event-card {
+
+    color: var(--clr-neutral-100);
+    /* background-image: url(oped.jpeg); */
+    background-size: cover;
+    padding: 10rem 0 0 ;
+    max-width: 35ch;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+    
+}
+.c0{
+background-image: url(images/kodak.png);
+}
+.c1{
+background-image: url(images/attack.png);
+}
+
+.c2{
+background-image: url(images/oped.png);
+}
+.c3{
+background-image: url(images/digi.png);
+}
+.c4{
+background-image: url(images/worth.png);
+}
+
+.card-content{
+    padding: 100px;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0), 
+        hsl(20 0% 0% / 0.3) 20%, 
+        hsl(0 0% 0% / 1));
+        
+        
+}
+
+@media(hover){
+    .event-card:hover{
+        transform: scale(1.05);
+    }
+    .event-card:hover .event-card-title::after{
+        transform: scaleX(1);
+    }
+    
+    .card-content{
+        transform: translateY(65%);
+        transition: transform 500ms ease;
+    }
+    .card-content > *{
+        opacity: 0;
+        transition: opacity 500ms linear;
+    }
+    .event-card:hover .card-content > *{
+        opacity: 1;
+    }
+    
+    .event-card:hover .card-content{
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+    .event-card-title::after{
+        transform: scaleX(0);
+    }
+}
+
+.event-card-title{
+    position: relative;
+    width: max-content;
+}
+.event-card-title::after{
+
+    content: "";
+    position:absolute;
+    height: 4px;
+    width: 100%;
+    background: var(--clr-accent-400);
+    left: 0;
+    bottom: 0;
+    
+    /* transition: transform 500ms ease; */
+}
+.card-button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-accent-400);
+    padding: 5px;
+    border-radius: 0.25em;
+    margin-top: 10px;
+}
+
+.card-button:hover,
+.card-button:focus{
+    background-color: var(--clr-neutral-100);
+    
+}
+
+.card-row{
+    justify-content: space-around;
+    
+}
+
+.card-lower-row{
+
+    margin-top: 40px;
+    justify-content: space-evenly;
+    
+}
+
+@media only screen and (max-width: 991px){
+    .cardbody{
+        margin-top: 100px;
+    }
 }
